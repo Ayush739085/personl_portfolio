@@ -1,0 +1,172 @@
+html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI System Boot | Ayush Singh</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/intro.css') }}">
+
+</head>
+
+<body>
+
+    <!-- Background -->
+    <div id="flash"></div>
+    <div class="background"></div>
+
+    <!-- Animated Rings -->
+    <div class="ring ring1"></div>
+    <div class="ring ring2"></div>
+    <div class="ring ring3"></div>
+
+    <div class="radar"></div>
+
+    <!-- Particles -->
+    <div class="particles">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+
+    <!-- Top Clock -->
+    <div class="top-bar">
+
+        <div id="clock"></div>
+
+        <div id="date"></div>
+
+    </div>
+
+
+    <!-- LEFT AI STATUS PANEL -->
+    <div class="left-panel">
+
+        <h2>AI STATUS</h2>
+
+        <p>
+            CPU :
+            <span>99%</span>
+        </p>
+
+        <p>
+            RAM :
+            <span>16 GB</span>
+        </p>
+
+        <p>
+            GPU :
+            <span>RTX Enabled</span>
+        </p>
+
+        <p>
+            Network :
+            <span>Connected</span>
+        </p>
+
+        <p>
+            Firewall :
+            <span>Secure</span>
+        </p>
+
+    </div>
+
+
+    <!-- RIGHT SYSTEM PANEL -->
+    <div class="right-panel">
+
+        <h2>SYSTEM</h2>
+
+        <p>Python ✔</p>
+        <p>Flask ✔</p>
+        <p>SQL ✔</p>
+        <p>AI Module ✔</p>
+        <p>Portfolio ✔</p>
+
+    </div>
+
+
+    <!-- MAIN AI BOOT BOX -->
+    <div class="loading-box">
+
+        <div class="scanner"></div>
+
+        <h1>🤖 AI SYSTEM BOOT</h1>
+
+        <h2 id="welcome"></h2>
+
+        <h3 id="status">
+            Initializing Neural Engine...
+        </h3>
+
+
+        <!-- Loading Bar -->
+        <div class="loading-bar">
+
+            <div class="progress" id="progress"></div>
+
+        </div>
+
+        <div id="percent">
+            0%
+        </div>
+
+
+        <!-- System Information -->
+        <div class="system-info">
+
+            <p>
+                Neural Engine
+                <span>ONLINE</span>
+            </p>
+
+            <p>
+                Quantum Core
+                <span>READY</span>
+            </p>
+
+            <p>
+                Security Layer
+                <span>ACTIVE</span>
+            </p>
+
+            <p>
+                User
+                <span>AYUSH VERIFIED</span>
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- AI TERMINAL -->
+    <div class="terminal">
+
+        <h3>AI TERMINAL</h3>
+
+        <div id="logs"></div>
+
+    </div>
+
+
+    <!-- JavaScript -->
+    <script src="{{ url_for('static', filename='js/intro.js') }}"></script>
+
+</body>
+
+</html>
+

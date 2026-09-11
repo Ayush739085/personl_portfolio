@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Project</title>
+
+    <style>
+        body{
+            background:#0f172a;
+            color:white;
+            font-family:Arial;
+        }
+
+        .box{
+            width:500px;
+            margin:60px auto;
+            background:#1e293b;
+            padding:30px;
+            border-radius:15px;
+        }
+
+        h2{
+            text-align:center;
+            color:#58d5ff;
+        }
+
+        input, textarea{
+            width:100%;
+            padding:12px;
+            margin-top:15px;
+            border:none;
+            border-radius:8px;
+        }
+
+        button{
+            width:100%;
+            margin-top:20px;
+            padding:12px;
+            background:#58d5ff;
+            border:none;
+            border-radius:8px;
+            font-size:18px;
+            cursor:pointer;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<div class="box">
+
+<h2>Add Project</h2>
+
+<form action="/add-project" method="POST">
+
+<input type="text"
+name="title"
+placeholder="Project Title"
+required>
+
+<textarea
+name="description"
+placeholder="Project Description"
+required></textarea>
+
+<input type="text"
+name="github"
+placeholder="GitHub Link"
+required>
+
+<button type="submit">
+Add Project
+</button>
+
+</form>
+
+</div>
+
+</body>
+</html>

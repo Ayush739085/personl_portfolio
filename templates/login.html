@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Workspace - Login</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="left-panel">
+        <h1>AI Workspace</h1>
+        <p>
+            Welcome to your Professional AI Portfolio.
+        </p>
+
+        <ul>
+            <li>✔️ AI Tools</li>
+            <li>✔️ Portfolio</li>
+            <li>✔️ Dashboard</li>
+            <li>✔️ Certificates</li>
+            <li>✔️ Projects</li>
+        </ul>
+    </div>
+
+    <div class="login-box">
+
+        <h2>Login</h2>
+
+        <form>
+
+            <input type="email"
+                   placeholder="Email Address"
+                   required>
+
+            <input type="password"
+                   placeholder="Password"
+                   required>
+
+            <button type="submit">
+                Login
+            </button>
+
+        </form>
+
+        <p>
+            Don't have an account?
+            <a href="#">Register</a>
+        </p>
+
+    </div>
+
+</div>
+
+<script src="{{ url_for('static', filename='js/login.js') }}"></script>
+
+</body>
+</html>

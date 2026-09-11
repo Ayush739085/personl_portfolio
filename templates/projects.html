@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Projects</title>
+    <style>
+        body{
+            font-family:Arial;
+            background:#0f172a;
+            color:white;
+            padding:30px;
+        }
+
+        table{
+            width:100%;
+            border-collapse:collapse;
+        }
+
+        th,td{
+            border:1px solid white;
+            padding:12px;
+            text-align:center;
+        }
+
+        th{
+            background:#38bdf8;
+            color:black;
+        }
+
+        a{
+            color:#38bdf8;
+            text-decoration:none;
+            font-weight:bold;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>All Projects</h1>
+
+<table>
+
+<tr>
+    <th>ID</th>
+    <th>Title</th>
+    <th>Description</th>
+    <th>GitHub</th>
+    <th>Action</th>
+</tr>
+
+{% for p in projects %}
+<tr>
+    <td>{{ p[0] }}</td>
+    <td>{{ p[1] }}</td>
+    <td>{{ p[2] }}</td>
+    <td>
+        <a href="{{ p[3] }}" target="_blank">Open</a>
+    </td>
+
+    <td>
+        <a href="/edit-project/{{ p[0] }}">Edit</a> |
+        <a href="/delete-project/{{ p[0] }}">Delete</a>
+    </td>
+</tr>
+{% endfor %}
+</table>
+
+</body>
+</html>

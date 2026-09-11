@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+<div class="stats">
+
+    <div class="stat-card">
+        <h2>{{ total_projects }}</h2>
+        <p>Total Projects</p>
+    </div>
+
+    <div class="stat-card">
+        <h2>{{ total_messages }}</h2>
+        <p>Total Messages</p>
+    </div>
+
+</div>
+    <style>
+
+        body{
+            margin:0;
+            background:#0f172a;
+            font-family:Arial;
+            color:white;
+        }
+
+        h1{
+            text-align:center;
+            padding:25px;
+        }
+
+        .container{
+            width:90%;
+            margin:auto;
+            display:grid;
+            grid-template-columns:repeat(2,1fr);
+            gap:25px;
+        }
+
+        .card{
+            background:#1e293b;
+            padding:30px;
+            border-radius:15px;
+            text-align:center;
+            box-shadow:0 0 15px cyan;
+        }
+
+        .card h2{
+            color:#58d5ff;
+        }
+
+        .card a{
+            display:inline-block;
+            margin-top:15px;
+            padding:10px 20px;
+            background:#58d5ff;
+            color:black;
+            text-decoration:none;
+            border-radius:30px;
+            font-weight:bold;
+        }
+        .stats{
+    width:90%;
+    margin:20px auto;
+    display:flex;
+    gap:20px;
+    justify-content:center;
+}
+
+.stat-card{
+    width:220px;
+    background:#1e293b;
+    padding:25px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 0 15px cyan;
+}
+
+.stat-card h2{
+    font-size:40px;
+    color:#58d5ff;
+    margin:0;
+}
+
+.stat-card p{
+    margin-top:10px;
+    font-size:18px;
+}
+
+    </style>
+
+</head>
+
+<body>
+
+<h1>Admin Dashboard</h1>
+
+<div class="container">
+
+<div class="card">
+<h2>📩 Contact Messages</h2>
+
+<a href="/messages">
+    <button>open</button>
+</a>
+</div>
+
+<div class="card">
+    <h2>📂 Projects</h2>
+
+    <a href="/projects">
+        Manage
+    </a>
+</div>
+
+<div class="card">
+<h2>🏆 Certificates</h2>
+<a href="#">Manage</a>
+</div>
+
+<div class="card">
+<h2>🚪 Logout</h2>
+<a href="/logout">Logout</a>
+</div>
+
+</div>
+
+</body>
+</html>

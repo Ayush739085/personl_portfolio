@@ -1,0 +1,595 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Ayush Portfolio</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+
+height:100vh;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+background:linear-gradient(135deg,#020617,#0f172a,#1e3a8a,#0f766e);
+background-size:400% 400%;
+
+animation:bgMove 12s infinite ease;
+
+overflow:hidden;
+
+}
+
+@keyframes bgMove{
+
+0%{background-position:0% 50%;}
+
+50%{background-position:100% 50%;}
+
+100%{background-position:0% 50%;}
+
+}
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px;
+}
+
+
+
+.hero-content h1{
+    font-size:60px;
+    color:white;
+    margin-bottom:15px;
+}
+
+#typing{
+    font-size:32px;
+    color:#38bdf8;
+    margin-bottom:20px;
+    min-height:45px;
+}
+
+.hero-content p{
+    font-size:18px;
+    color:#ddd;
+    line-height:32px;
+    margin-bottom:35px;
+}
+
+
+
+@keyframes fade{
+
+from{
+
+opacity:0;
+transform:translateY(40px);
+
+}
+
+to{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+}
+
+.hero h1{
+
+font-size:60px;
+
+color:white;
+
+margin-bottom:15px;
+
+}
+
+.hero h2{
+
+font-size:30px;
+
+color:#38bdf8;
+
+margin-bottom:20px;
+
+}
+
+.hero p{
+
+font-size:18px;
+
+color:#ddd;
+
+line-height:32px;
+
+margin-bottom:40px;
+
+}
+
+
+
+.primary:hover{
+
+transform:translateY(-5px);
+
+box-shadow:0 0 25px cyan;
+
+}
+
+.hero{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+width:100%;
+
+padding:80px;
+
+}
+
+.hero-left{
+
+width:50%;
+
+}
+
+.hero-right{
+
+width:40%;
+
+display:flex;
+
+justify-content:center;
+
+}
+
+.tag{
+
+display:inline-block;
+
+padding:10px 18px;
+
+border:1px solid cyan;
+
+border-radius:30px;
+
+color:#00ffff;
+
+margin-bottom:25px;
+
+}
+
+.hero h1{
+
+font-size:70px;
+
+color:white;
+
+margin-bottom:20px;
+
+}
+
+.hero span{
+
+color:#00ffff;
+
+}
+
+#typing{
+
+font-size:32px;
+
+color:#38bdf8;
+
+height:45px;
+
+margin-bottom:25px;
+
+}
+
+.hero-text{
+
+font-size:20px;
+
+color:#ddd;
+
+margin-bottom:35px;
+
+}
+
+.hero-btns{
+
+display:flex;
+
+gap:20px;
+
+}
+
+.btn1,.btn2{
+
+padding:16px 35px;
+
+border-radius:40px;
+
+text-decoration:none;
+
+font-weight:bold;
+
+transition:.4s;
+
+}
+
+.btn1{
+
+background:#00ffff;
+
+color:black;
+
+}
+
+.btn2{
+
+border:2px solid cyan;
+
+color:white;
+
+}
+
+.btn1:hover,.btn2:hover{
+
+transform:translateY(-5px);
+
+box-shadow:0 0 25px cyan;
+
+}
+
+.hero-circle{
+
+width:380px;
+
+height:380px;
+
+border-radius:50%;
+
+border:3px solid cyan;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+box-shadow:0 0 50px cyan;
+
+overflow:hidden;
+
+}
+
+.hero-circle img{
+
+width:100%;
+
+height:100%;
+
+object-fit:cover;
+
+}
+
+.secondary:hover{
+
+background:white;
+
+color:black;
+
+}
+
+.circle{
+    position:absolute;
+    border-radius:50%;
+    filter:blur(25px);
+    animation:float 8s ease-in-out infinite;
+    opacity:.45;
+}
+
+.c1{
+    width:220px;
+    height:220px;
+    background:#00e5ff;
+    top:8%;
+    left:8%;
+}
+
+.c2{
+    width:280px;
+    height:280px;
+    background:#8b5cf6;
+    right:8%;
+    bottom:8%;
+    animation-delay:2s;
+}
+
+.c3{
+    width:160px;
+    height:160px;
+    background:#14b8a6;
+    top:60%;
+    left:50%;
+    animation-delay:4s;
+}
+
+@keyframes float{
+
+0%{
+transform:translateY(0);
+}
+
+50%{
+transform:translateY(-35px);
+}
+
+100%{
+transform:translateY(0);
+}
+
+}
+
+/* ===== Clock ===== */
+
+.clock-container{
+
+position:absolute;
+
+top:25px;
+
+right:35px;
+
+text-align:right;
+
+padding:18px 25px;
+
+border-radius:18px;
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(15px);
+
+border:1px solid rgba(0,255,255,.3);
+
+box-shadow:0 0 20px rgba(0,255,255,.3);
+
+}
+
+#clock{
+
+font-size:32px;
+
+font-weight:bold;
+
+color:#00ffff;
+
+text-shadow:0 0 15px cyan;
+
+}
+
+#date{
+
+margin-top:5px;
+
+font-size:15px;
+
+color:white;
+
+}
+
+#countdown{
+
+margin-top:12px;
+
+font-size:16px;
+
+color:#38bdf8;
+
+}
+
+#timer{
+
+color:#00ff99;
+
+font-weight:bold;
+
+font-size:20px;
+
+}
+
+</style>
+
+</head>
+
+<body>
+   <div class="clock-container">
+
+    <div id="clock"></div>
+
+    <div id="date"></div>
+
+    <div id="countdown">
+        Redirecting in <span id="timer">5</span> sec...
+    </div>
+
+</div>
+
+<div class="circle c1"></div>
+<div class="circle c2"></div>
+<div class="circle c3"></div>
+
+<section class="hero">
+
+    <!-- Left Side -->
+
+    <div class="hero-left">
+
+        <p class="tag">🚀 AI SOFTWARE DEVELOPER</p>
+
+        <h1>
+            Hi, I'm <span>Ayush</span>
+        </h1>
+
+        <h2 id="typing"></h2>
+
+        <p class="hero-text">
+            Building Modern Web Applications with Python,
+            Flask, SQL, AI and Data Analytics.
+        </p>
+
+        <div class="hero-btns">
+
+            <a href="/dashboard" class="btn1">
+                🚀 Explore Portfolio
+            </a>
+
+            <a href="#" class="btn2">
+                📄 Download Resume
+            </a>
+
+        </div>
+
+    </div>
+
+    <!-- Right Side -->
+
+    <div class="hero-right">
+
+        <div class="hero-circle">
+
+            <img src="{{ url_for('static', filename='image/profile.jpg') }}" alt="Ayush">
+
+        </div>
+
+    </div>
+
+</section>
+
+<script src="{{ url_for('static', filename='js/landing.js') }}"></script>
+
+</body>
+
+<script>
+const words = [
+"Full Stack Python Developer",
+"Flask Developer",
+"AI Enthusiast",
+"Data Analyst",
+"SQL Developer"
+];
+
+let i = 0;
+let j = 0;
+let current = "";
+let isDeleting = false;
+
+function type() {
+
+current = words[i];
+
+if (!isDeleting) {
+    j++;
+} else {
+    j--;
+}
+
+document.getElementById("typing").textContent =
+current.substring(0, j);
+
+if (!isDeleting && j === current.length) {
+    isDeleting = true;
+    setTimeout(type, 1200);
+    return;
+}
+
+if (isDeleting && j === 0) {
+    isDeleting = false;
+    i++;
+
+    if (i === words.length) {
+        i = 0;
+    }
+}
+
+setTimeout(type, isDeleting ? 50 : 100);
+
+}
+
+type();
+/* ===== Live Clock ===== */
+
+function updateClock(){
+
+const now=new Date();
+
+document.getElementById("clock").innerHTML=
+now.toLocaleTimeString();
+
+document.getElementById("date").innerHTML=
+now.toDateString();
+
+}
+
+updateClock();
+
+setInterval(updateClock,1000);
+
+
+/* ===== Countdown ===== */
+
+let seconds=10;
+
+const timer=document.getElementById("timer");
+
+const countdown=setInterval(()=>{
+
+seconds--;
+
+timer.innerHTML=seconds;
+
+if(seconds<=0){
+
+clearInterval(countdown);
+
+// Dashboard Open
+
+window.location.href="/dashboard";
+
+}
+
+},1000);
+</script>
+
+</body>
+</html>
