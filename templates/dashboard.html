@@ -5,12 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ayush Singh | AI Portfolio</title>
 
-<link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
+<!-- Version cache-buster added -->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}?v=5.0">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
 
 <style>
-/* ==================== GLOBAL OVERRIDES ==================== */
+/* ==================== GLOBAL RESET ==================== */
 * {
     box-sizing: border-box !important;
 }
@@ -26,7 +27,7 @@ html, body {
     overflow-x: hidden !important;
 }
 
-/* Force visible AOS */
+/* Force visible animations */
 [data-aos] {
     opacity: 1 !important;
     transform: none !important;
@@ -99,31 +100,33 @@ html, body {
     margin-top: 15px;
 }
 
-/* ==================== COMPLETE MOBILE OVERHAUL (max-width: 768px) ==================== */
+/* ==================== 100% PERFECT MOBILE VIEW (max-width: 768px) ==================== */
 @media screen and (max-width: 768px) {
     body {
         display: block !important;
         position: relative !important;
         overflow-y: auto !important;
+        padding-top: 60px !important;
     }
 
-    /* Floating Hamburger Button */
+    /* Fixed Top-Right Floating Hamburger */
     .menu-btn {
         display: flex !important;
         position: fixed !important;
-        top: 15px !important;
-        right: 15px !important;
+        top: 12px !important;
+        right: 12px !important;
+        left: auto !important;
         z-index: 999999 !important;
         background: #58d5ff !important;
         color: #0f172a !important;
-        width: 44px !important;
-        height: 44px !important;
+        width: 42px !important;
+        height: 42px !important;
         border-radius: 50% !important;
         justify-content: center !important;
         align-items: center !important;
         cursor: pointer !important;
-        box-shadow: 0 0 15px rgba(0,0,0,0.6) !important;
-        font-size: 20px !important;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.6) !important;
+        font-size: 18px !important;
     }
 
     /* Off-canvas sidebar */
@@ -144,67 +147,118 @@ html, body {
         left: 0 !important;
     }
 
-    /* Main Container */
+    /* Main Container: Full width, zero offset */
     .main {
         width: 100% !important;
-        margin-left: 0 !important;
-        padding: 20px 15px 40px 15px !important;
+        max-width: 100vw !important;
+        margin: 0 !important;
+        padding: 5px 15px 40px 15px !important;
+        box-sizing: border-box !important;
         display: block !important;
         position: relative !important;
-        overflow: visible !important;
+        overflow-x: hidden !important;
     }
 
+    /* Navbar: Centered cleanly without any right side gap */
     .navbar {
         display: flex !important;
         flex-direction: column !important;
-        align-items: flex-start !important;
-        gap: 12px !important;
-        padding-right: 50px !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
         width: 100% !important;
+        padding: 0 !important;
+        margin: 0 auto 20px auto !important;
+        box-sizing: border-box !important;
     }
 
     .navbar h2 {
-        font-size: 1.3rem !important;
+        font-size: 1.45rem !important;
+        margin: 0 0 10px 0 !important;
+        color: #ffffff !important;
+        text-align: center !important;
+        width: 100% !important;
+        display: block !important;
     }
 
+    /* Social Icons: Horizontal single-row, perfectly centered */
     .navbar .icons {
         display: flex !important;
-        gap: 15px !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 20px !important;
+        width: 100% !important;
+        margin: 0 auto !important;
+        padding: 0 !important;
     }
 
-    /* Hero section: Stack left and right vertically */
+    .navbar .icons a, 
+    .navbar .icons .notification {
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        font-size: 1.3rem !important;
+        color: #58d5ff !important;
+        text-decoration: none !important;
+        position: relative !important;
+    }
+
+    .navbar .icons .notification .badge {
+        position: absolute !important;
+        top: -6px !important;
+        right: -8px !important;
+        background: #ef4444 !important;
+        color: white !important;
+        font-size: 10px !important;
+        padding: 2px 5px !important;
+        border-radius: 50% !important;
+    }
+
+    /* Hero Section: Centered & Stacked */
     .hero-section {
         display: flex !important;
         flex-direction: column !important;
         gap: 25px !important;
         width: 100% !important;
         text-align: center !important;
-        padding: 20px 10px !important;
+        padding: 5px 0 !important;
+        align-items: center !important;
     }
 
     .hero-left {
         width: 100% !important;
+        padding: 0 !important;
+    }
+
+    .hero-left h4 {
+        margin: 0 0 5px 0 !important;
+        font-size: 1rem !important;
     }
 
     .hero-left h1.hero-name {
-        font-size: 2rem !important;
+        font-size: 2.1rem !important;
         line-height: 1.2 !important;
-        margin: 8px 0 !important;
+        margin: 5px 0 !important;
     }
 
     .hero-left h2 {
-        font-size: 1.1rem !important;
+        font-size: 1.2rem !important;
+        margin: 5px 0 12px 0 !important;
         min-height: 28px !important;
+        color: #58d5ff !important;
     }
 
     .hero-left p {
-        font-size: 0.92rem !important;
-        line-height: 1.5 !important;
+        font-size: 0.95rem !important;
+        line-height: 1.6 !important;
         width: 100% !important;
         margin: 10px 0 20px 0 !important;
+        word-break: break-word !important;
     }
 
-    /* Buttons row to column stack */
+    /* Action Buttons Stack */
     .hero-buttons {
         display: flex !important;
         flex-direction: column !important;
@@ -216,43 +270,55 @@ html, body {
 
     .hero-buttons .btn, 
     .hero-buttons .btn2 {
-        width: 90% !important;
-        max-width: 280px !important;
+        width: 100% !important;
+        max-width: 290px !important;
         text-align: center !important;
         padding: 12px 15px !important;
     }
 
-    /* Profile card full width clean stack */
+    /* Profile Card Fixes */
     .profile-card {
         width: 100% !important;
-        max-width: 320px !important;
-        margin: 0 auto !important;
-        padding: 20px 15px !important;
+        max-width: 330px !important;
+        margin: 15px auto !important;
+        padding: 24px 16px !important;
+        box-sizing: border-box !important;
+        text-align: center !important;
     }
 
     .profile-card .profile-img {
         width: 110px !important;
         height: 110px !important;
+        border-radius: 50% !important;
+        object-fit: cover !important;
         margin: 0 auto 12px auto !important;
+        display: block !important;
     }
 
     .profile-card h2 {
-        font-size: 1.3rem !important;
+        font-size: 1.35rem !important;
+        margin-bottom: 6px !important;
     }
 
     .profile-card h4 {
-        font-size: 0.95rem !important;
+        font-size: 0.92rem !important;
         line-height: 1.4 !important;
+        white-space: normal !important;
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
+        padding: 0 4px !important;
         margin: 6px 0 !important;
+        color: #58d5ff !important;
     }
 
     .profile-card p {
         font-size: 0.88rem !important;
-        line-height: 1.4 !important;
+        line-height: 1.45 !important;
+        word-break: break-word !important;
     }
 
     .profile-card .btn {
-        width: 90% !important;
+        width: 100% !important;
         max-width: 240px !important;
         margin: 12px auto 0 auto !important;
         padding: 10px 15px !important;
@@ -356,6 +422,7 @@ html, body {
 <!-- Main Area -->
 <div class="main">
 
+    <!-- Perfectly Centered Navbar -->
     <div class="navbar">
         <h2>Welcome Ayush 👋</h2>
         <div class="icons">
@@ -486,13 +553,17 @@ html, body {
     <section id="projects" class="projects">
         <h2>My Projects</h2>
         <div class="project-container">
-            {% for project in projects %}
-            <div class="project-card">
-                <h3>{{ project[1] }}</h3>
-                <p>{{ project[2] }}</p>
-                <a href="{{ project[3] }}" target="_blank" class="project-btn">View Project</a>
-            </div>
-            {% endfor %}
+            {% if projects %}
+                {% for project in projects %}
+                <div class="project-card">
+                    <h3>{{ project[1] }}</h3>
+                    <p>{{ project[2] }}</p>
+                    <a href="{{ project[3] }}" target="_blank" class="project-btn">View Project</a>
+                </div>
+                {% endfor %}
+            {% else %}
+                <p style="color: #94a3b8; text-align: center; width: 100%;">No projects added yet.</p>
+            {% endif %}
         </div>
     </section>
 
