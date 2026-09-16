@@ -1,9 +1,154 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard</title>
-<div class="stats">
 
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #0f172a;
+            color: white;
+            padding-bottom: 40px;
+        }
+
+        h1 {
+            text-align: center;
+            padding: 25px 15px;
+            font-size: 28px;
+            color: #58d5ff;
+        }
+
+        /* Stats Section */
+        .stats {
+            width: 90%;
+            max-width: 1000px;
+            margin: 10px auto 30px auto;
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .stat-card {
+            flex: 1;
+            min-width: 200px;
+            max-width: 280px;
+            background: #1e293b;
+            padding: 25px 20px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.4);
+        }
+
+        .stat-card h2 {
+            font-size: 38px;
+            color: #58d5ff;
+            margin: 0;
+        }
+
+        .stat-card p {
+            margin-top: 8px;
+            font-size: 16px;
+            color: #cbd5e1;
+        }
+
+        /* Dashboard Actions Grid */
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background: #1e293b;
+            padding: 25px 20px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card h2 {
+            color: #58d5ff;
+            font-size: 20px;
+            margin-bottom: 12px;
+        }
+
+        .card a, .card a button {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 25px;
+            background: #58d5ff;
+            color: black;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 15px;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        .card a:hover, .card a button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 15px cyan;
+        }
+
+        /* Mobile Responsive View */
+        @media screen and (max-width: 768px) {
+            h1 {
+                font-size: 24px;
+                padding: 20px 10px;
+            }
+
+            .stats {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+
+            .stat-card {
+                width: 100%;
+                max-width: 100%;
+            }
+
+            .container {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .card {
+                padding: 20px 15px;
+            }
+
+            .card a, .card a button {
+                width: 80%;
+                max-width: 220px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>Admin Dashboard</h1>
+
+<!-- Stats Bar (Moved to body) -->
+<div class="stats">
     <div class="stat-card">
         <h2>{{ total_projects }}</h2>
         <p>Total Projects</p>
@@ -13,116 +158,29 @@
         <h2>{{ total_messages }}</h2>
         <p>Total Messages</p>
     </div>
-
 </div>
-    <style>
 
-        body{
-            margin:0;
-            background:#0f172a;
-            font-family:Arial;
-            color:white;
-        }
-
-        h1{
-            text-align:center;
-            padding:25px;
-        }
-
-        .container{
-            width:90%;
-            margin:auto;
-            display:grid;
-            grid-template-columns:repeat(2,1fr);
-            gap:25px;
-        }
-
-        .card{
-            background:#1e293b;
-            padding:30px;
-            border-radius:15px;
-            text-align:center;
-            box-shadow:0 0 15px cyan;
-        }
-
-        .card h2{
-            color:#58d5ff;
-        }
-
-        .card a{
-            display:inline-block;
-            margin-top:15px;
-            padding:10px 20px;
-            background:#58d5ff;
-            color:black;
-            text-decoration:none;
-            border-radius:30px;
-            font-weight:bold;
-        }
-        .stats{
-    width:90%;
-    margin:20px auto;
-    display:flex;
-    gap:20px;
-    justify-content:center;
-}
-
-.stat-card{
-    width:220px;
-    background:#1e293b;
-    padding:25px;
-    border-radius:15px;
-    text-align:center;
-    box-shadow:0 0 15px cyan;
-}
-
-.stat-card h2{
-    font-size:40px;
-    color:#58d5ff;
-    margin:0;
-}
-
-.stat-card p{
-    margin-top:10px;
-    font-size:18px;
-}
-
-    </style>
-
-</head>
-
-<body>
-
-<h1>Admin Dashboard</h1>
-
+<!-- Main Actions -->
 <div class="container">
+    <div class="card">
+        <h2>📩 Contact Messages</h2>
+        <a href="/messages">Open</a>
+    </div>
 
-<div class="card">
-<h2>📩 Contact Messages</h2>
+    <div class="card">
+        <h2>📂 Projects</h2>
+        <a href="/projects">Manage</a>
+    </div>
 
-<a href="/messages">
-    <button>open</button>
-</a>
-</div>
+    <div class="card">
+        <h2>🏆 Certificates</h2>
+        <a href="#">Manage</a>
+    </div>
 
-<div class="card">
-    <h2>📂 Projects</h2>
-
-    <a href="/projects">
-        Manage
-    </a>
-</div>
-
-<div class="card">
-<h2>🏆 Certificates</h2>
-<a href="#">Manage</a>
-</div>
-
-<div class="card">
-<h2>🚪 Logout</h2>
-<a href="/logout">Logout</a>
-</div>
-
+    <div class="card">
+        <h2>🚪 Logout</h2>
+        <a href="/logout">Logout</a>
+    </div>
 </div>
 
 </body>

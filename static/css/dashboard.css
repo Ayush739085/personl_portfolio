@@ -948,3 +948,38 @@ body.light-mode .profile-box h3{
         width: 90%;
     }
 }
+/* ==================== MOBILE DASHBOARD RESPONSIVE ==================== */
+@media screen and (max-width: 768px) {
+    body {
+        flex-direction: column !important;
+        padding: 10px !important;
+    }
+
+    .sidebar {
+        width: 100% !important;
+        position: relative !important;
+        height: auto !important;
+        padding: 15px !important;
+        box-sizing: border-box !important;
+    }
+
+    .main-content, .main, .container {
+        width: 100% !important;
+        margin-left: 0 !important;
+        padding: 15px 10px !important;
+        box-sizing: border-box !important;
+    }
+
+    table {
+        display: block !important;
+        width: 100% !important;
+        overflow-x: auto !important;
+        white-space: nowrap !important;
+    }
+
+    .card, .box {
+        width: 100% !important;
+        margin-bottom: 15px !important;
+        box-sizing: border-box !important;
+    }
+}
