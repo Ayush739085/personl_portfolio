@@ -6,7 +6,7 @@
 <title>Ayush Singh | AI Portfolio</title>
 
 <!-- Version cache-buster updated -->
-<link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}?v=6.0">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}?v=7.0">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
 
@@ -106,7 +106,7 @@ html, body {
         display: block !important;
         position: relative !important;
         overflow-y: auto !important;
-        padding-top: 85px !important; /* Top clearance for floating hamburger */
+        padding-top: 85px !important;
     }
 
     /* Fixed Top-Right Floating Hamburger */
@@ -159,7 +159,7 @@ html, body {
         overflow-x: hidden !important;
     }
 
-    /* Navbar: Centered cleanly */
+    /* Centered Navbar */
     .navbar {
         display: flex !important;
         flex-direction: column !important;
@@ -181,7 +181,6 @@ html, body {
         display: block !important;
     }
 
-    /* Social Icons: Horizontal row */
     .navbar .icons {
         display: flex !important;
         flex-direction: row !important;
@@ -216,7 +215,7 @@ html, body {
         border-radius: 50% !important;
     }
 
-    /* Hero Section: Centered & Stacked */
+    /* Hero Section */
     .hero-section {
         display: flex !important;
         flex-direction: column !important;
@@ -256,9 +255,9 @@ html, body {
         width: 100% !important;
         margin: 10px 0 20px 0 !important;
         word-break: break-word !important;
+        overflow-wrap: anywhere !important;
     }
 
-    /* Action Buttons Stack */
     .hero-buttons {
         display: flex !important;
         flex-direction: column !important;
@@ -276,19 +275,20 @@ html, body {
         padding: 12px 15px !important;
     }
 
-    /* Profile Card Fixes */
+    /* Profile Card Fixes: Text Clipping & Side-bar completely resolved */
     .profile-card {
-        width: 100% !important;
-        max-width: 330px !important;
+        width: calc(100% - 20px) !important;
+        max-width: 320px !important;
         margin: 15px auto !important;
         padding: 24px 16px !important;
         box-sizing: border-box !important;
         text-align: center !important;
+        overflow: hidden !important;
     }
 
     .profile-card .profile-img {
-        width: 110px !important;
-        height: 110px !important;
+        width: 105px !important;
+        height: 105px !important;
         border-radius: 50% !important;
         object-fit: cover !important;
         margin: 0 auto 12px auto !important;
@@ -296,33 +296,41 @@ html, body {
     }
 
     .profile-card h2 {
-        font-size: 1.35rem !important;
+        font-size: 1.3rem !important;
         margin-bottom: 6px !important;
+        word-break: break-word !important;
     }
 
-    /* Subtitle without edge clipping */
+    /* Subtitle fix: clean wrap */
     .profile-card h4 {
-        font-size: 0.84rem !important;
+        font-size: 0.82rem !important;
         line-height: 1.45 !important;
         white-space: normal !important;
-        word-wrap: break-word !important;
-        overflow-wrap: break-word !important;
-        padding: 0 10px !important;
+        word-break: break-word !important;
+        overflow-wrap: anywhere !important;
+        padding: 0 4px !important;
         margin: 6px 0 !important;
         color: #58d5ff !important;
+        display: block !important;
     }
 
+    /* Bio paragraph fix: no clipping of words */
     .profile-card p {
-        font-size: 0.88rem !important;
-        line-height: 1.45 !important;
+        font-size: 0.85rem !important;
+        line-height: 1.5 !important;
+        white-space: normal !important;
         word-break: break-word !important;
+        overflow-wrap: anywhere !important;
+        padding: 0 8px !important;
+        margin: 10px 0 15px 0 !important;
     }
 
     .profile-card .btn {
         width: 100% !important;
-        max-width: 240px !important;
+        max-width: 220px !important;
         margin: 12px auto 0 auto !important;
         padding: 10px 15px !important;
+        font-size: 14px !important;
     }
 
     /* Stats Grid */
@@ -423,7 +431,7 @@ html, body {
 <!-- Main Area -->
 <div class="main">
 
-    <!-- Perfectly Centered Navbar -->
+    <!-- Centered Navbar -->
     <div class="navbar">
         <h2>Welcome Ayush 👋</h2>
         <div class="icons">
