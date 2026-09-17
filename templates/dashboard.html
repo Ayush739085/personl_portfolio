@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ayush Singh | AI Portfolio</title>
 
-<!-- Version cache-buster added -->
-<link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}?v=5.0">
+<!-- Version cache-buster updated -->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}?v=6.0">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
 
@@ -106,27 +106,27 @@ html, body {
         display: block !important;
         position: relative !important;
         overflow-y: auto !important;
-        padding-top: 60px !important;
+        padding-top: 85px !important; /* Top clearance for floating hamburger */
     }
 
     /* Fixed Top-Right Floating Hamburger */
     .menu-btn {
         display: flex !important;
         position: fixed !important;
-        top: 12px !important;
-        right: 12px !important;
+        top: 16px !important;
+        right: 16px !important;
         left: auto !important;
         z-index: 999999 !important;
         background: #58d5ff !important;
         color: #0f172a !important;
-        width: 42px !important;
-        height: 42px !important;
+        width: 44px !important;
+        height: 44px !important;
         border-radius: 50% !important;
         justify-content: center !important;
         align-items: center !important;
         cursor: pointer !important;
         box-shadow: 0 4px 15px rgba(0,0,0,0.6) !important;
-        font-size: 18px !important;
+        font-size: 20px !important;
     }
 
     /* Off-canvas sidebar */
@@ -147,19 +147,19 @@ html, body {
         left: 0 !important;
     }
 
-    /* Main Container: Full width, zero offset */
+    /* Main Container */
     .main {
         width: 100% !important;
         max-width: 100vw !important;
         margin: 0 !important;
-        padding: 5px 15px 40px 15px !important;
+        padding: 0 16px 40px 16px !important;
         box-sizing: border-box !important;
         display: block !important;
         position: relative !important;
         overflow-x: hidden !important;
     }
 
-    /* Navbar: Centered cleanly without any right side gap */
+    /* Navbar: Centered cleanly */
     .navbar {
         display: flex !important;
         flex-direction: column !important;
@@ -181,7 +181,7 @@ html, body {
         display: block !important;
     }
 
-    /* Social Icons: Horizontal single-row, perfectly centered */
+    /* Social Icons: Horizontal row */
     .navbar .icons {
         display: flex !important;
         flex-direction: row !important;
@@ -300,13 +300,14 @@ html, body {
         margin-bottom: 6px !important;
     }
 
+    /* Subtitle without edge clipping */
     .profile-card h4 {
-        font-size: 0.92rem !important;
-        line-height: 1.4 !important;
+        font-size: 0.84rem !important;
+        line-height: 1.45 !important;
         white-space: normal !important;
         word-wrap: break-word !important;
         overflow-wrap: break-word !important;
-        padding: 0 4px !important;
+        padding: 0 10px !important;
         margin: 6px 0 !important;
         color: #58d5ff !important;
     }
